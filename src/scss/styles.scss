@@ -40,10 +40,6 @@ p {
   }
 }
 
-#footer-logo path {
-  fill: $very-light-gray !important;
-}
-
 input {
   padding: .5rem 1rem;
   border-radius: 50px;
@@ -219,7 +215,7 @@ header {
     grid-template-columns: repeat(4, 1fr);
     color: $dark-grayish-blue;
 
-    img {
+    a {
       grid-area: logo;
 
       &:hover {

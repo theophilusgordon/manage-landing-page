@@ -5,6 +5,10 @@
     margin-bottom: 2rem;
   }
 
+  header {
+    padding: 1rem 5%;
+  }
+
   h1,
   h2,
   h3 {
@@ -110,7 +114,7 @@
         margin: 2rem 0;
       }
 
-      #footer-logo {
+      a {
         margin: 2rem auto;
       }
     }

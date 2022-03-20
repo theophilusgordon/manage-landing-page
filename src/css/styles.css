@@ -76,10 +76,6 @@ p {
   cursor: pointer;
 }
 
-#footer-logo path {
-  fill: #fafafa !important;
-}
-
 input {
   padding: 0.5rem 1rem;
   border-radius: 50px;
@@ -219,10 +215,10 @@ header img {
   grid-template-columns: repeat(4, 1fr);
   color: #9095a7;
 }
-.section-footer img {
+.section-footer a {
   grid-area: logo;
 }
-.section-footer img:hover {
+.section-footer a:hover {
   cursor: pointer;
 }
 .section-footer .social {
@@ -261,6 +257,10 @@ header img {
     width: 80%;
     height: 4rem;
     margin-bottom: 2rem;
+  }
+
+  header {
+    padding: 1rem 5%;
   }
 
   h1,
@@ -340,7 +340,7 @@ h3 {
   .section-footer .social {
     margin: 2rem 0;
   }
-  .section-footer #footer-logo {
+  .section-footer a {
     margin: 2rem auto;
   }
 }
