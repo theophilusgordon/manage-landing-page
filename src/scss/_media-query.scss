@@ -1,0 +1,138 @@
+@media only screen and (max-width: 768px) {
+  input {
+    width: 80%;
+    height: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-align: center;
+  }
+
+  h3 {
+    margin: .25rem 0;
+  }
+
+  .swiper {
+    width: 70%;
+  }
+
+  .navbar {
+    display: none;
+    position: fixed;
+    width: 90%;
+    margin: 3rem auto;
+    background-color: $very-light-gray;
+    text-align: center;
+
+    ul {
+      li {
+        display: block;
+        font-size: 1.5rem;
+        padding: 1.5rem 0;
+        font-weight: 700;
+        color: $very-dark-blue;
+      }
+    }
+
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  header {
+    button {
+      display: none;
+    }
+  }
+
+  .section {
+    &-home {
+      grid-template-columns: 1fr;
+
+      &-text {
+        order: 2;
+        text-align: center;
+
+        p {
+          margin: 2rem 0;
+        }
+
+        button {
+          margin: 0 auto;
+        }
+      }
+
+      &-image {
+        order: 1;
+      }
+    }
+
+    &-info {
+      grid-template-areas: "zero"
+        "one"
+        "two"
+        "three";
+      grid-template-columns: 1fr;
+
+      &-zero {
+        p {
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+
+    &-testimonial {
+      &-grid {
+        grid-template-columns: 1fr;
+        margin: 2rem 5%;
+      }
+    }
+
+    &-footer {
+      grid-template-areas: "subscribe subscribe"
+        "list1 list2"
+        "social social"
+        "logo logo"
+        "copyright copyright";
+      grid-template-columns: repeat(2, 1fr);
+
+      p {
+        margin-top: 2rem;
+        text-align: center;
+      }
+
+      .social {
+        margin: 2rem 0;
+      }
+
+      #footer-logo {
+        margin: 2rem auto;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+  input {
+    width: 70%;
+    height: 3rem;
+  }
+
+  .swiper {
+    width: 90%;
+  }
+
+  .section {
+    &-get-started {
+      grid-template-areas: "text"
+        "btn";
+      grid-template-columns: 1fr;
+    }
+  }
+}

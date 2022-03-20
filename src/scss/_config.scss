@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,500;0,700;1,400&display=swap');
+
+// Resets
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+
+
+// Colors
+$bright-red: hsl(12, 88%, 59%);
+$dark-blue: hsl(228, 39%, 23%);
+$dark-grayish-blue: hsl(227, 12%, 61%);
+$very-dark-blue: hsl(233, 12%, 13%);
+$very-pale-red: hsl(13, 100%, 96%);
+$very-light-gray: hsl(0, 0%, 98%);
+
+// Buttons
+button {
+  padding: .5rem 1rem;
+  border-radius: 50px;
+  border: none;
+  background-color: $bright-red;
+  color: $very-light-gray;
+  transition: all .5s ease-in-out;
+}
+
+button:hover {
+  box-shadow: 1px 3px 10px $dark-blue;
+  cursor: pointer;
+}
+
+// Attribution 
+.attribution {
+  background-color: $very-dark-blue;
+  color: $very-light-gray;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    color: $bright-red;
+  }
+}
+
+.overlay {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .5));
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}

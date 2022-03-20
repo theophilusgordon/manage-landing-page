@@ -1,0 +1,273 @@
+@import 'config';
+
+h1,
+h2,
+h3 {
+  color: $very-dark-blue;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 5vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(1.25rem, 4vw, 3rem);
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: clamp(1.15rem, 2.5vw, 1.75rem);
+  margin-bottom: 1.5rem;
+}
+
+p {
+  color: $dark-grayish-blue;
+}
+
+.number-btn {
+  @extend button;
+}
+
+.btn-center {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.logo {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#footer-logo path {
+  fill: $very-light-gray !important;
+}
+
+input {
+  padding: .5rem 1rem;
+  border-radius: 50px;
+  border: none;
+  margin-right: 1rem;
+}
+
+.swiper {
+  position: relative;
+  min-width: 300px;
+  width: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 5%;
+  z-index: 2;
+
+  img {
+    margin: auto 0;
+  }
+}
+
+.navbar {
+  ul {
+    li {
+      display: inline;
+      padding: 0 .5rem;
+
+      a {
+        text-decoration: none;
+        color: $very-dark-blue;
+        transition: color 0.25s ease-in-out;
+
+        &:hover {
+          cursor: pointer;
+          color: $dark-grayish-blue;
+        }
+      }
+    }
+  }
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: $very-dark-blue;
+}
+
+.section {
+  &-home {
+    margin: 0 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-image: url("../images/bg-simplify-section-desktop.svg");
+
+    &-image {
+      img {
+        width: 100%;
+      }
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: start;
+
+      p {
+        font-size: clamp(1rem, 2vw, 2rem);
+      }
+    }
+  }
+
+  &-info {
+    margin: 3rem 5%;
+    display: grid;
+    grid-template-areas: "zero one"
+      "zero two"
+      "zero three";
+    grid-template-columns: repeat(2, 1fr);
+
+    &-title {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      margin: 1rem 0;
+    }
+
+    &-body {
+      p {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &-zero {
+      grid-area: zero;
+    }
+
+    &-one {
+      grid-area: one;
+    }
+
+    &-two {
+      grid-area: two;
+    }
+
+    &-three {
+      grid-area: three;
+    }
+  }
+
+  &-testimonial {
+    margin: 3rem 0;
+
+    &-grid {
+      width: 100%;
+      text-align: center;
+
+      &__user {
+        background-color: $very-light-gray;
+        padding: 1rem;
+
+        &-image {
+          display: flex;
+          justify-content: center;
+
+          img {
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+  }
+
+  &-get-started {
+    padding: 3rem 5%;
+    background-color: $bright-red;
+    display: grid;
+    grid-template-areas: "text . btn";
+    grid-template-columns: 2fr 1fr 1fr;
+
+
+    &__text {
+      grid-area: text;
+      color: $very-light-gray;
+    }
+
+    &__btn {
+      grid-area: btn;
+      color: $bright-red;
+      background-color: $very-light-gray;
+      margin: auto;
+    }
+  }
+
+  &-footer {
+    padding: 3rem 5%;
+    background-color: $very-dark-blue;
+    display: grid;
+    grid-template-areas: "logo list1 list2 subscribe"
+      "social list1 list2 copyright";
+    grid-template-columns: repeat(4, 1fr);
+    color: $dark-grayish-blue;
+
+    img {
+      grid-area: logo;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .social {
+      grid-area: social;
+      display: flex;
+      justify-content: space-between;
+
+      img {
+        width: 40px;
+        margin: auto;
+        transition: all .25s ease-in-out;
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.25);
+        }
+      }
+    }
+
+    &-text {
+
+      &:nth-child(1) {
+        grid-area: list1;
+      }
+
+      &:nth-child(2) {
+        grid-area: list2;
+      }
+
+      li {
+        list-style-type: none;
+      }
+    }
+
+    .subscribe {
+      grid-area: subscribe;
+    }
+
+    p {
+      grid-area: copyright;
+      margin-top: 2rem;
+    }
+  }
+}
+
+@import 'media-query';
