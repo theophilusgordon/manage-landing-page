@@ -284,6 +284,7 @@ h3 {
     margin: 3rem auto;
     background-color: #fafafa;
     text-align: center;
+    z-index: 3;
     animation: slide-in 0.5s ease-out;
   }
   .navbar ul li {
@@ -348,11 +349,9 @@ h3 {
   @keyframes slide-in {
     0% {
       opacity: 0;
-      top: -30vh;
     }
     100% {
       opacity: 1;
-      top: 0;
     }
   }
 }
